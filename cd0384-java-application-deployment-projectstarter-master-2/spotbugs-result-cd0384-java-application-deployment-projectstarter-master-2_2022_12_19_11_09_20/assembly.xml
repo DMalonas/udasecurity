@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.4.2" sequence="0" timestamp="1671447970360" analysisTimestamp="1671447970062" release="">
+  <Project projectName="cd0384-java-application-deployment-projectstarter-master-2[assembly]">
+    <AuxClasspathEntry>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/image/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/assembly/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/security/target/classes</AuxClasspathEntry>
+    <SrcDir>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/assembly/src/main/java</SrcDir>
+    <SrcDir>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/assembly/src/main/resources</SrcDir>
+  </Project>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 19 Dec 2022 11:06:10 +0000" total_classes="0" referenced_classes="0" total_bugs="0" total_size="0" num_packages="0" java_version="17.0.5" vm_version="17.0.5+1-b653.14" cpu_seconds="60.45" clock_seconds="190.57" peak_mbytes="2165.15" alloc_mbytes="972.00" gc_seconds="0.51">
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="113" invocations="2" avgMicrosecondsPerInvocation="56525" maxMicrosecondsPerInvocation="99586" standardDeviationMicrosecondsPerInvocation="43061"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="86" invocations="153" avgMicrosecondsPerInvocation="568" maxMicrosecondsPerInvocation="6879" standardDeviationMicrosecondsPerInvocation="1025"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="84" invocations="154" avgMicrosecondsPerInvocation="549" maxMicrosecondsPerInvocation="2614" standardDeviationMicrosecondsPerInvocation="372"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.4.2" sequence="0" timestamp="1671447970061" analysisTimestamp="1671447968162" release="">
+  <Project projectName="cd0384-java-application-deployment-projectstarter-master-2[image]">
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\image\target\classes\com\image\AwsImageService.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\image\target\classes\com\image\FakeImageService.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\image\target\classes\com\image\ImageService.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\image\target\classes\module-info.class</Jar>
+    <AuxClasspathEntry>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/image/target/classes</AuxClasspathEntry>
+    <SrcDir>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/image/src/main/java</SrcDir>
+  </Project>
+  <BugInstance type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" priority="2" rank="17" abbrev="ST" category="STYLE" instanceHash="cd097ffc03fb9a52b7af52f65411db4b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Write to static field from instance method</ShortMessage>
+    <LongMessage>Write to static field com.image.AwsImageService.rekognitionClient from instance method new com.image.AwsImageService()</LongMessage>
+    <Class classname="com.image.AwsImageService" primary="true">
+      <SourceLine classname="com.image.AwsImageService" sourcefile="AwsImageService.java" sourcepath="com/image/AwsImageService.java" relSourcepath="com\image\AwsImageService.java">
+        <Message>In AwsImageService.java</Message>
+      </SourceLine>
+      <Message>In class com.image.AwsImageService</Message>
+    </Class>
+    <Method classname="com.image.AwsImageService" name="&lt;init&gt;" signature="()V" isStatic="false" primary="true">
+      <SourceLine classname="com.image.AwsImageService" start="45" end="63" startBytecode="0" endBytecode="428" sourcefile="AwsImageService.java" sourcepath="com/image/AwsImageService.java" relSourcepath="com\image\AwsImageService.java"/>
+      <Message>In method new com.image.AwsImageService()</Message>
+    </Method>
+    <Field classname="com.image.AwsImageService" name="rekognitionClient" signature="Lsoftware/amazon/awssdk/services/rekognition/RekognitionClient;" isStatic="true" primary="true">
+      <SourceLine classname="com.image.AwsImageService" sourcefile="AwsImageService.java" sourcepath="com/image/AwsImageService.java" relSourcepath="com\image\AwsImageService.java">
+        <Message>In AwsImageService.java</Message>
+      </SourceLine>
+      <Message>Field com.image.AwsImageService.rekognitionClient</Message>
+    </Field>
+    <SourceLine classname="com.image.AwsImageService" primary="true" start="62" end="62" startBytecode="155" endBytecode="155" sourcefile="AwsImageService.java" sourcepath="com/image/AwsImageService.java" relSourcepath="com\image\AwsImageService.java">
+      <Message>At AwsImageService.java:[line 62]</Message>
+    </SourceLine>
+    <SourceLine classname="com.image.AwsImageService" primary="true" start="62" end="62" startBytecode="155" endBytecode="155" sourcefile="AwsImageService.java" sourcepath="com/image/AwsImageService.java" relSourcepath="com\image\AwsImageService.java">
+      <Message>At AwsImageService.java:[line 62]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="STYLE">
+    <Description>Dodgy code</Description>
+  </BugCategory>
+  <BugPattern type="ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD" abbrev="ST" category="STYLE">
+    <ShortDescription>Write to static field from instance method</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This instance method writes to a static field. This is tricky to get
+correct if multiple instances are being manipulated,
+and generally bad practice.
+</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="ST">
+    <Description>Misuse of static fields</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 19 Dec 2022 10:50:58 +0000" total_classes="3" referenced_classes="40" total_bugs="1" total_size="51" num_packages="1" java_version="17.0.5" vm_version="17.0.5+1-b653.14" cpu_seconds="67.31" clock_seconds="192.92" peak_mbytes="2165.21" alloc_mbytes="972.00" gc_seconds="0.55" priority_2="1">
+    <FileStats path="com/image/AwsImageService.java" bugCount="1" size="42" bugHash="3b2688e788e33c2d939e59dbab141c35"/>
+    <FileStats path="com/image/FakeImageService.java" bugCount="0" size="7"/>
+    <FileStats path="com/image/ImageService.java" bugCount="0" size="2"/>
+    <PackageStats package="com.image" total_bugs="1" total_types="3" total_size="51" priority_2="1">
+      <ClassStats class="com.image.AwsImageService" sourceFile="AwsImageService.java" interface="false" size="42" bugs="1" priority_2="1"/>
+      <ClassStats class="com.image.FakeImageService" sourceFile="FakeImageService.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="com.image.ImageService" sourceFile="ImageService.java" interface="true" size="2" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="541" invocations="628" avgMicrosecondsPerInvocation="862" maxMicrosecondsPerInvocation="23428" standardDeviationMicrosecondsPerInvocation="1933"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="298" invocations="629" avgMicrosecondsPerInvocation="475" maxMicrosecondsPerInvocation="19567" standardDeviationMicrosecondsPerInvocation="948"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="173" invocations="9" avgMicrosecondsPerInvocation="19272" maxMicrosecondsPerInvocation="152766" standardDeviationMicrosecondsPerInvocation="47315"/>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="162" invocations="2" avgMicrosecondsPerInvocation="81117" maxMicrosecondsPerInvocation="120663" standardDeviationMicrosecondsPerInvocation="39546"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="113" invocations="40" avgMicrosecondsPerInvocation="2827" maxMicrosecondsPerInvocation="12645" standardDeviationMicrosecondsPerInvocation="3501"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="84" invocations="40" avgMicrosecondsPerInvocation="2123" maxMicrosecondsPerInvocation="8780" standardDeviationMicrosecondsPerInvocation="2660"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="63" invocations="148" avgMicrosecondsPerInvocation="427" maxMicrosecondsPerInvocation="3572" standardDeviationMicrosecondsPerInvocation="490"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

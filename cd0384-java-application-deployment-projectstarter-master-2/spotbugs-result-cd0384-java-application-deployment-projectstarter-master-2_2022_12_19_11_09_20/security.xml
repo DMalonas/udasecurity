@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.4.2" sequence="0" timestamp="1671447975102" analysisTimestamp="1671447970360" release="">
+  <Project projectName="cd0384-java-application-deployment-projectstarter-master-2[security]">
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\model\AlarmStatus.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\model\ArmingStatus.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\model\PretendDatabaseSecurityRepositoryImpl$1.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\model\PretendDatabaseSecurityRepositoryImpl.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\model\SecurityRepository.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\model\Sensor.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\model\SensorType.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\module-info.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\service\SecurityService$1.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\service\SecurityService.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\service\StyleService.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\view\CatpointApp.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\view\CatpointGui.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\view\ControlPanel.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\view\DisplayPanel.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\view\ImagePanel.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\view\SensorPanel.class</Jar>
+    <Jar>C:\Users\user\Downloads\cd0384-java-application-deployment-projectstarter-master-2 (2)\cd0384-java-application-deployment-projectstarter-master-2\starter\catpoint-parent\security\target\classes\view\StatusListener.class</Jar>
+    <AuxClasspathEntry>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/image/target/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/security/target/classes</AuxClasspathEntry>
+    <SrcDir>C:/Users/user/Downloads/cd0384-java-application-deployment-projectstarter-master-2 (2)/cd0384-java-application-deployment-projectstarter-master-2/starter/catpoint-parent/security/src/main/java</SrcDir>
+  </Project>
+  <BugInstance type="EI_EXPOSE_REP" priority="2" rank="18" abbrev="EI" category="MALICIOUS_CODE" instanceHash="7f2de1fd9750645c9bc54e4337fe4404" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by returning reference to mutable object</ShortMessage>
+    <LongMessage>model.PretendDatabaseSecurityRepositoryImpl.getSensors() may expose internal representation by returning PretendDatabaseSecurityRepositoryImpl.sensors</LongMessage>
+    <Class classname="model.PretendDatabaseSecurityRepositoryImpl" primary="true">
+      <SourceLine classname="model.PretendDatabaseSecurityRepositoryImpl" sourcefile="PretendDatabaseSecurityRepositoryImpl.java" sourcepath="model/PretendDatabaseSecurityRepositoryImpl.java" relSourcepath="model\PretendDatabaseSecurityRepositoryImpl.java">
+        <Message>In PretendDatabaseSecurityRepositoryImpl.java</Message>
+      </SourceLine>
+      <Message>In class model.PretendDatabaseSecurityRepositoryImpl</Message>
+    </Class>
+    <Method classname="model.PretendDatabaseSecurityRepositoryImpl" name="getSensors" signature="()Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="model.PretendDatabaseSecurityRepositoryImpl" start="92" end="92" startBytecode="0" endBytecode="46" sourcefile="PretendDatabaseSecurityRepositoryImpl.java" sourcepath="model/PretendDatabaseSecurityRepositoryImpl.java" relSourcepath="model\PretendDatabaseSecurityRepositoryImpl.java"/>
+      <Message>In method model.PretendDatabaseSecurityRepositoryImpl.getSensors()</Message>
+    </Method>
+    <Field classname="model.PretendDatabaseSecurityRepositoryImpl" name="sensors" signature="Ljava/util/Set;" isStatic="false" primary="true">
+      <SourceLine classname="model.PretendDatabaseSecurityRepositoryImpl" sourcefile="PretendDatabaseSecurityRepositoryImpl.java" sourcepath="model/PretendDatabaseSecurityRepositoryImpl.java" relSourcepath="model\PretendDatabaseSecurityRepositoryImpl.java">
+        <Message>In PretendDatabaseSecurityRepositoryImpl.java</Message>
+      </SourceLine>
+      <Message>Field model.PretendDatabaseSecurityRepositoryImpl.sensors</Message>
+    </Field>
+    <SourceLine classname="model.PretendDatabaseSecurityRepositoryImpl" primary="true" start="92" end="92" startBytecode="4" endBytecode="4" sourcefile="PretendDatabaseSecurityRepositoryImpl.java" sourcepath="model/PretendDatabaseSecurityRepositoryImpl.java" relSourcepath="model\PretendDatabaseSecurityRepositoryImpl.java">
+      <Message>At PretendDatabaseSecurityRepositoryImpl.java:[line 92]</Message>
+    </SourceLine>
+    <SourceLine classname="model.PretendDatabaseSecurityRepositoryImpl" primary="true" start="92" end="92" startBytecode="4" endBytecode="4" sourcefile="PretendDatabaseSecurityRepositoryImpl.java" sourcepath="model/PretendDatabaseSecurityRepositoryImpl.java" relSourcepath="model\PretendDatabaseSecurityRepositoryImpl.java">
+      <Message>At PretendDatabaseSecurityRepositoryImpl.java:[line 92]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="851e9d225aaecb312d4741f3bdcd2b7b" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new service.SecurityService(SecurityRepository, ImageService) may expose internal representation by storing an externally mutable object into SecurityService.securityRepository</LongMessage>
+    <Class classname="service.SecurityService" primary="true">
+      <SourceLine classname="service.SecurityService" sourcefile="SecurityService.java" sourcepath="service/SecurityService.java" relSourcepath="service\SecurityService.java">
+        <Message>In SecurityService.java</Message>
+      </SourceLine>
+      <Message>In class service.SecurityService</Message>
+    </Class>
+    <Method classname="service.SecurityService" name="&lt;init&gt;" signature="(Lmodel/SecurityRepository;Lcom/image/ImageService;)V" isStatic="false" primary="true">
+      <SourceLine classname="service.SecurityService" start="27" end="31" startBytecode="0" endBytecode="112" sourcefile="SecurityService.java" sourcepath="service/SecurityService.java" relSourcepath="service\SecurityService.java"/>
+      <Message>In method new service.SecurityService(SecurityRepository, ImageService)</Message>
+    </Method>
+    <Field classname="service.SecurityService" name="securityRepository" signature="Lmodel/SecurityRepository;" isStatic="false" primary="true">
+      <SourceLine classname="service.SecurityService" sourcefile="SecurityService.java" sourcepath="service/SecurityService.java" relSourcepath="service\SecurityService.java">
+        <Message>In SecurityService.java</Message>
+      </SourceLine>
+      <Message>Field service.SecurityService.securityRepository</Message>
+    </Field>
+    <LocalVariable name="securityRepository" register="1" pc="17" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named securityRepository</Message>
+    </LocalVariable>
+    <SourceLine classname="service.SecurityService" primary="true" start="28" end="28" startBytecode="17" endBytecode="17" sourcefile="SecurityService.java" sourcepath="service/SecurityService.java" relSourcepath="service\SecurityService.java">
+      <Message>At SecurityService.java:[line 28]</Message>
+    </SourceLine>
+    <SourceLine classname="service.SecurityService" primary="true" start="28" end="28" startBytecode="17" endBytecode="17" sourcefile="SecurityService.java" sourcepath="service/SecurityService.java" relSourcepath="service\SecurityService.java">
+      <Message>At SecurityService.java:[line 28]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" rank="16" abbrev="Se" category="BAD_PRACTICE" instanceHash="d6c42278a801357518cb0cdd63283116" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-serializable value stored into instance field of a serializable class</ShortMessage>
+    <LongMessage>com.image.FakeImageService stored into non-transient field CatpointGui.imageService</LongMessage>
+    <Class classname="view.CatpointGui" primary="true">
+      <SourceLine classname="view.CatpointGui" sourcefile="CatpointGui.java" sourcepath="view/CatpointGui.java" relSourcepath="view\CatpointGui.java">
+        <Message>In CatpointGui.java</Message>
+      </SourceLine>
+      <Message>In class view.CatpointGui</Message>
+    </Class>
+    <Field classname="view.CatpointGui" name="imageService" signature="Lcom/image/ImageService;" isStatic="false" primary="true">
+      <SourceLine classname="view.CatpointGui" sourcefile="CatpointGui.java" sourcepath="view/CatpointGui.java" relSourcepath="view\CatpointGui.java">
+        <Message>In CatpointGui.java</Message>
+      </SourceLine>
+      <Message>Field view.CatpointGui.imageService</Message>
+    </Field>
+    <Type descriptor="Lcom/image/FakeImageService;" role="TYPE_FOUND">
+      <SourceLine classname="com.image.FakeImageService" start="9" end="13" sourcefile="FakeImageService.java" sourcepath="com/image/FakeImageService.java">
+        <Message>At FakeImageService.java:[lines 9-13]</Message>
+      </SourceLine>
+      <Message>Actual type com.image.FakeImageService</Message>
+    </Type>
+    <SourceLine classname="view.CatpointGui" primary="true" start="20" end="20" startBytecode="23" endBytecode="23" sourcefile="CatpointGui.java" sourcepath="view/CatpointGui.java" relSourcepath="view\CatpointGui.java">
+      <Message>At CatpointGui.java:[line 20]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="SE_BAD_FIELD_STORE" priority="2" rank="16" abbrev="Se" category="BAD_PRACTICE" instanceHash="9587ff4d515051c9485ca4eeef34b5f2" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Non-serializable value stored into instance field of a serializable class</ShortMessage>
+    <LongMessage>model.PretendDatabaseSecurityRepositoryImpl stored into non-transient field CatpointGui.securityRepository</LongMessage>
+    <Class classname="view.CatpointGui" primary="true">
+      <SourceLine classname="view.CatpointGui" sourcefile="CatpointGui.java" sourcepath="view/CatpointGui.java" relSourcepath="view\CatpointGui.java">
+        <Message>In CatpointGui.java</Message>
+      </SourceLine>
+      <Message>In class view.CatpointGui</Message>
+    </Class>
+    <Field classname="view.CatpointGui" name="securityRepository" signature="Lmodel/SecurityRepository;" isStatic="false" primary="true">
+      <SourceLine classname="view.CatpointGui" sourcefile="CatpointGui.java" sourcepath="view/CatpointGui.java" relSourcepath="view\CatpointGui.java">
+        <Message>In CatpointGui.java</Message>
+      </SourceLine>
+      <Message>Field view.CatpointGui.securityRepository</Message>
+    </Field>
+    <Type descriptor="Lmodel/PretendDatabaseSecurityRepositoryImpl;" role="TYPE_FOUND">
+      <SourceLine classname="model.PretendDatabaseSecurityRepositoryImpl" start="30" end="102" sourcefile="PretendDatabaseSecurityRepositoryImpl.java" sourcepath="model/PretendDatabaseSecurityRepositoryImpl.java" relSourcepath="model\PretendDatabaseSecurityRepositoryImpl.java">
+        <Message>At PretendDatabaseSecurityRepositoryImpl.java:[lines 30-102]</Message>
+      </SourceLine>
+      <Message>Actual type model.PretendDatabaseSecurityRepositoryImpl</Message>
+    </Type>
+    <SourceLine classname="view.CatpointGui" primary="true" start="19" end="19" startBytecode="12" endBytecode="12" sourcefile="CatpointGui.java" sourcepath="view/CatpointGui.java" relSourcepath="view\CatpointGui.java">
+      <Message>At CatpointGui.java:[line 19]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="5a34a80c885c785483d6258602df9514" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new view.ControlPanel(SecurityService, SensorPanel) may expose internal representation by storing an externally mutable object into ControlPanel.securityService</LongMessage>
+    <Class classname="view.ControlPanel" primary="true">
+      <SourceLine classname="view.ControlPanel" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java">
+        <Message>In ControlPanel.java</Message>
+      </SourceLine>
+      <Message>In class view.ControlPanel</Message>
+    </Class>
+    <Method classname="view.ControlPanel" name="&lt;init&gt;" signature="(Lservice/SecurityService;Lview/SensorPanel;)V" isStatic="false" primary="true">
+      <SourceLine classname="view.ControlPanel" start="23" end="52" startBytecode="0" endBytecode="276" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java"/>
+      <Message>In method new view.ControlPanel(SecurityService, SensorPanel)</Message>
+    </Method>
+    <Field classname="view.ControlPanel" name="securityService" signature="Lservice/SecurityService;" isStatic="false" primary="true">
+      <SourceLine classname="view.ControlPanel" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java">
+        <Message>In ControlPanel.java</Message>
+      </SourceLine>
+      <Message>Field view.ControlPanel.securityService</Message>
+    </Field>
+    <LocalVariable name="securityService" register="1" pc="17" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named securityService</Message>
+    </LocalVariable>
+    <SourceLine classname="view.ControlPanel" primary="true" start="25" end="25" startBytecode="17" endBytecode="17" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java">
+      <Message>At ControlPanel.java:[line 25]</Message>
+    </SourceLine>
+    <SourceLine classname="view.ControlPanel" primary="true" start="25" end="25" startBytecode="17" endBytecode="17" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java">
+      <Message>At ControlPanel.java:[line 25]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="937ead7796caa3aba7171ee2687841df" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new view.ControlPanel(SecurityService, SensorPanel) may expose internal representation by storing an externally mutable object into ControlPanel.sensorPanel</LongMessage>
+    <Class classname="view.ControlPanel" primary="true">
+      <SourceLine classname="view.ControlPanel" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java">
+        <Message>In ControlPanel.java</Message>
+      </SourceLine>
+      <Message>In class view.ControlPanel</Message>
+    </Class>
+    <Method classname="view.ControlPanel" name="&lt;init&gt;" signature="(Lservice/SecurityService;Lview/SensorPanel;)V" isStatic="false" primary="true">
+      <SourceLine classname="view.ControlPanel" start="23" end="52" startBytecode="0" endBytecode="276" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java"/>
+      <Message>In method new view.ControlPanel(SecurityService, SensorPanel)</Message>
+    </Method>
+    <Field classname="view.ControlPanel" name="sensorPanel" signature="Lview/SensorPanel;" isStatic="false" primary="true">
+      <SourceLine classname="view.ControlPanel" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java">
+        <Message>In ControlPanel.java</Message>
+      </SourceLine>
+      <Message>Field view.ControlPanel.sensorPanel</Message>
+    </Field>
+    <LocalVariable name="sensorPanel" register="2" pc="22" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named sensorPanel</Message>
+    </LocalVariable>
+    <SourceLine classname="view.ControlPanel" primary="true" start="26" end="26" startBytecode="22" endBytecode="22" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java">
+      <Message>At ControlPanel.java:[line 26]</Message>
+    </SourceLine>
+    <SourceLine classname="view.ControlPanel" primary="true" start="26" end="26" startBytecode="22" endBytecode="22" sourcefile="ControlPanel.java" sourcepath="view/ControlPanel.java" relSourcepath="view\ControlPanel.java">
+      <Message>At ControlPanel.java:[line 26]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="e2ee6b9d37e871348c8835b2d7762031" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new view.ImagePanel(SecurityService) may expose internal representation by storing an externally mutable object into ImagePanel.securityService</LongMessage>
+    <Class classname="view.ImagePanel" primary="true">
+      <SourceLine classname="view.ImagePanel" sourcefile="ImagePanel.java" sourcepath="view/ImagePanel.java" relSourcepath="view\ImagePanel.java">
+        <Message>In ImagePanel.java</Message>
+      </SourceLine>
+      <Message>In class view.ImagePanel</Message>
+    </Class>
+    <Method classname="view.ImagePanel" name="&lt;init&gt;" signature="(Lservice/SecurityService;)V" isStatic="false" primary="true">
+      <SourceLine classname="view.ImagePanel" start="29" end="72" startBytecode="0" endBytecode="343" sourcefile="ImagePanel.java" sourcepath="view/ImagePanel.java" relSourcepath="view\ImagePanel.java"/>
+      <Message>In method new view.ImagePanel(SecurityService)</Message>
+    </Method>
+    <Field classname="view.ImagePanel" name="securityService" signature="Lservice/SecurityService;" isStatic="false" primary="true">
+      <SourceLine classname="view.ImagePanel" sourcefile="ImagePanel.java" sourcepath="view/ImagePanel.java" relSourcepath="view\ImagePanel.java">
+        <Message>In ImagePanel.java</Message>
+      </SourceLine>
+      <Message>Field view.ImagePanel.securityService</Message>
+    </Field>
+    <LocalVariable name="securityService" register="1" pc="31" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named securityService</Message>
+    </LocalVariable>
+    <SourceLine classname="view.ImagePanel" primary="true" start="31" end="31" startBytecode="31" endBytecode="31" sourcefile="ImagePanel.java" sourcepath="view/ImagePanel.java" relSourcepath="view\ImagePanel.java">
+      <Message>At ImagePanel.java:[line 31]</Message>
+    </SourceLine>
+    <SourceLine classname="view.ImagePanel" primary="true" start="31" end="31" startBytecode="31" endBytecode="31" sourcefile="ImagePanel.java" sourcepath="view/ImagePanel.java" relSourcepath="view\ImagePanel.java">
+      <Message>At ImagePanel.java:[line 31]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="EI_EXPOSE_REP2" priority="2" rank="18" abbrev="EI2" category="MALICIOUS_CODE" instanceHash="4740e36c6b30ccf09f571be7e9c387e4" instanceOccurrenceNum="0" instanceOccurrenceMax="0" cweid="374">
+    <ShortMessage>May expose internal representation by incorporating reference to mutable object</ShortMessage>
+    <LongMessage>new view.SensorPanel(SecurityService) may expose internal representation by storing an externally mutable object into SensorPanel.securityService</LongMessage>
+    <Class classname="view.SensorPanel" primary="true">
+      <SourceLine classname="view.SensorPanel" sourcefile="SensorPanel.java" sourcepath="view/SensorPanel.java" relSourcepath="view\SensorPanel.java">
+        <Message>In SensorPanel.java</Message>
+      </SourceLine>
+      <Message>In class view.SensorPanel</Message>
+    </Class>
+    <Method classname="view.SensorPanel" name="&lt;init&gt;" signature="(Lservice/SecurityService;)V" isStatic="false" primary="true">
+      <SourceLine classname="view.SensorPanel" start="31" end="49" startBytecode="0" endBytecode="315" sourcefile="SensorPanel.java" sourcepath="view/SensorPanel.java" relSourcepath="view\SensorPanel.java"/>
+      <Message>In method new view.SensorPanel(SecurityService)</Message>
+    </Method>
+    <Field classname="view.SensorPanel" name="securityService" signature="Lservice/SecurityService;" isStatic="false" primary="true">
+      <SourceLine classname="view.SensorPanel" sourcefile="SensorPanel.java" sourcepath="view/SensorPanel.java" relSourcepath="view\SensorPanel.java">
+        <Message>In SensorPanel.java</Message>
+      </SourceLine>
+      <Message>Field view.SensorPanel.securityService</Message>
+    </Field>
+    <LocalVariable name="securityService" register="1" pc="94" role="LOCAL_VARIABLE_NAMED">
+      <Message>Local variable named securityService</Message>
+    </LocalVariable>
+    <SourceLine classname="view.SensorPanel" primary="true" start="33" end="33" startBytecode="94" endBytecode="94" sourcefile="SensorPanel.java" sourcepath="view/SensorPanel.java" relSourcepath="view\SensorPanel.java">
+      <Message>At SensorPanel.java:[line 33]</Message>
+    </SourceLine>
+    <SourceLine classname="view.SensorPanel" primary="true" start="33" end="33" startBytecode="94" endBytecode="94" sourcefile="SensorPanel.java" sourcepath="view/SensorPanel.java" relSourcepath="view\SensorPanel.java">
+      <Message>At SensorPanel.java:[line 33]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="MALICIOUS_CODE">
+    <Description>Malicious code vulnerability</Description>
+  </BugCategory>
+  <BugPattern type="SE_BAD_FIELD_STORE" abbrev="Se" category="BAD_PRACTICE">
+    <ShortDescription>Non-serializable value stored into instance field of a serializable class</ShortDescription>
+    <Details><![CDATA[
+
+<p> A non-serializable value is stored into a non-transient field
+of a serializable class.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP2" abbrev="EI2" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by incorporating reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This code stores a reference to an externally mutable object into the
+  internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Storing a copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugPattern type="EI_EXPOSE_REP" abbrev="EI" category="MALICIOUS_CODE" cweid="374">
+    <ShortDescription>May expose internal representation by returning reference to mutable object</ShortDescription>
+    <Details><![CDATA[
+
+  <p> Returning a reference to a mutable object value stored in one of the object's fields
+  exposes the internal representation of the object.&nbsp;
+   If instances
+   are accessed by untrusted code, and unchecked changes to
+   the mutable object would compromise security or other
+   important properties, you will need to do something different.
+  Returning a new copy of the object is better approach in many situations.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="Se">
+    <Description>Incorrect definition of Serializable class</Description>
+  </BugCode>
+  <BugCode abbrev="EI">
+    <Description>Method returning array may expose internal representation</Description>
+  </BugCode>
+  <BugCode abbrev="EI2">
+    <Description>Storing reference to mutable object</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Mon, 19 Dec 2022 11:06:05 +0000" total_classes="17" referenced_classes="391" total_bugs="8" total_size="517" num_packages="3" java_version="17.0.5" vm_version="17.0.5+1-b653.14" cpu_seconds="60.27" clock_seconds="190.58" peak_mbytes="2165.19" alloc_mbytes="972.00" gc_seconds="0.51" priority_2="8">
+    <FileStats path="model/AlarmStatus.java" bugCount="0" size="23"/>
+    <FileStats path="model/ArmingStatus.java" bugCount="0" size="23"/>
+    <FileStats path="model/PretendDatabaseSecurityRepositoryImpl.java" bugCount="1" size="60" bugHash="e673ca2cd63b6e1c796581e901fc0d80"/>
+    <FileStats path="model/SecurityRepository.java" bugCount="0" size="9"/>
+    <FileStats path="model/Sensor.java" bugCount="0" size="47"/>
+    <FileStats path="model/SensorType.java" bugCount="0" size="11"/>
+    <FileStats path="service/SecurityService.java" bugCount="1" size="106" bugHash="fccb12107cd8b1965fa095d5185e8df3"/>
+    <FileStats path="service/StyleService.java" bugCount="0" size="6"/>
+    <FileStats path="view/CatpointApp.java" bugCount="0" size="7"/>
+    <FileStats path="view/CatpointGui.java" bugCount="2" size="29" bugHash="1077a52b5c267c8cc90553552066cdf9"/>
+    <FileStats path="view/ControlPanel.java" bugCount="2" size="31" bugHash="b1bd1dd31acdb4ef309ce52674ba2fe9"/>
+    <FileStats path="view/DisplayPanel.java" bugCount="0" size="24"/>
+    <FileStats path="view/ImagePanel.java" bugCount="1" size="56" bugHash="67165deb45d98902eb77a7443e574444"/>
+    <FileStats path="view/SensorPanel.java" bugCount="1" size="81" bugHash="7ac098a3b07457357e4fd19a3ad168b9"/>
+    <FileStats path="view/StatusListener.java" bugCount="0" size="4"/>
+    <PackageStats package="model" total_bugs="1" total_types="7" total_size="173" priority_2="1">
+      <ClassStats class="model.AlarmStatus" sourceFile="AlarmStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="model.ArmingStatus" sourceFile="ArmingStatus.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="model.PretendDatabaseSecurityRepositoryImpl" sourceFile="PretendDatabaseSecurityRepositoryImpl.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="model.PretendDatabaseSecurityRepositoryImpl$1" sourceFile="PretendDatabaseSecurityRepositoryImpl.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="model.SecurityRepository" sourceFile="SecurityRepository.java" interface="true" size="9" bugs="0"/>
+      <ClassStats class="model.Sensor" sourceFile="Sensor.java" interface="false" size="47" bugs="0"/>
+      <ClassStats class="model.SensorType" sourceFile="SensorType.java" interface="false" size="11" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="service" total_bugs="1" total_types="3" total_size="112" priority_2="1">
+      <ClassStats class="service.SecurityService" sourceFile="SecurityService.java" interface="false" size="102" bugs="1" priority_2="1"/>
+      <ClassStats class="service.SecurityService$1" sourceFile="SecurityService.java" interface="false" size="4" bugs="0"/>
+      <ClassStats class="service.StyleService" sourceFile="StyleService.java" interface="false" size="6" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="view" total_bugs="6" total_types="7" total_size="232" priority_2="6">
+      <ClassStats class="view.CatpointApp" sourceFile="CatpointApp.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="view.CatpointGui" sourceFile="CatpointGui.java" interface="false" size="29" bugs="2" priority_2="2"/>
+      <ClassStats class="view.ControlPanel" sourceFile="ControlPanel.java" interface="false" size="31" bugs="2" priority_2="2"/>
+      <ClassStats class="view.DisplayPanel" sourceFile="DisplayPanel.java" interface="false" size="24" bugs="0"/>
+      <ClassStats class="view.ImagePanel" sourceFile="ImagePanel.java" interface="false" size="56" bugs="1" priority_2="1"/>
+      <ClassStats class="view.SensorPanel" sourceFile="SensorPanel.java" interface="false" size="81" bugs="1" priority_2="1"/>
+      <ClassStats class="view.StatusListener" sourceFile="StatusListener.java" interface="true" size="4" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="859" invocations="1893" avgMicrosecondsPerInvocation="454" maxMicrosecondsPerInvocation="53154" standardDeviationMicrosecondsPerInvocation="1270"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="626" invocations="391" avgMicrosecondsPerInvocation="1601" maxMicrosecondsPerInvocation="165070" standardDeviationMicrosecondsPerInvocation="8691"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="621" invocations="1890" avgMicrosecondsPerInvocation="328" maxMicrosecondsPerInvocation="39377" standardDeviationMicrosecondsPerInvocation="1054"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="442" invocations="391" avgMicrosecondsPerInvocation="1131" maxMicrosecondsPerInvocation="19769" standardDeviationMicrosecondsPerInvocation="2115"/>
+      <ClassProfile name="edu.umd.cs.findbugs.FindBugs2" totalMilliseconds="292" invocations="2" avgMicrosecondsPerInvocation="146073" maxMicrosecondsPerInvocation="164964" standardDeviationMicrosecondsPerInvocation="18894"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="234" invocations="912" avgMicrosecondsPerInvocation="257" maxMicrosecondsPerInvocation="8186" standardDeviationMicrosecondsPerInvocation="376"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="136" invocations="391" avgMicrosecondsPerInvocation="348" maxMicrosecondsPerInvocation="5521" standardDeviationMicrosecondsPerInvocation="616"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="118" invocations="391" avgMicrosecondsPerInvocation="302" maxMicrosecondsPerInvocation="32407" standardDeviationMicrosecondsPerInvocation="1683"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="95" invocations="477" avgMicrosecondsPerInvocation="200" maxMicrosecondsPerInvocation="8244" standardDeviationMicrosecondsPerInvocation="482"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="93" invocations="391" avgMicrosecondsPerInvocation="239" maxMicrosecondsPerInvocation="3845" standardDeviationMicrosecondsPerInvocation="389"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="90" invocations="391" avgMicrosecondsPerInvocation="231" maxMicrosecondsPerInvocation="2580" standardDeviationMicrosecondsPerInvocation="403"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>
