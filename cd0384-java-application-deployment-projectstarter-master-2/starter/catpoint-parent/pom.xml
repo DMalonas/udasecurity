@@ -149,11 +149,10 @@
             <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-surefire-plugin</artifactId>
-              <configuration>
+                <version>3.0.0-M6</version>
+                <configuration>
                   <argLine>
                       --add-opens security/security.service=ALL-UNNAMED
-                      --add-opens security/security.model=ALL-UNNAMED
-                      --add-opens security/security.view=ALL-UNNAMED
                   </argLine>
                   <forkCount>3</forkCount>
                 <reuseForks>true</reuseForks>
