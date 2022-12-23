@@ -39,7 +39,7 @@ public class SecurityService {
      * @param armingStatus
      */
     public void setArmingStatus(ArmingStatus armingStatus) {
-            if(armingStatus == DISARMED) {
+        if(armingStatus == DISARMED) {
             setAlarmStatus(NO_ALARM);
         } else if ((armingStatus == ARMED_AWAY || armingStatus == ARMED_HOME) && (catWasDetected == false)) {
             getSensors().forEach(sensor -> {
@@ -100,14 +100,11 @@ public class SecurityService {
         switch(securityRepository.getAlarmStatus()) {
             case NO_ALARM:
                 setAlarmStatus(AlarmStatus.PENDING_ALARM);
-                int a = 5;
                 break;
             case PENDING_ALARM:
                 setAlarmStatus(ALARM);
-                int b = 10;
                 break;
             default:
-                int  c = 3;
                 setAlarmStatus(NO_ALARM);
                 break;
         }
@@ -188,5 +185,13 @@ public class SecurityService {
 
     public ArmingStatus getArmingStatus() {
         return securityRepository.getArmingStatus();
+    }
+
+    public boolean isCatWasDetected() {
+        return catWasDetected;
+    }
+
+    public void setCatWasDetected(boolean catWasDetected) {
+        this.catWasDetected = catWasDetected;
     }
 }

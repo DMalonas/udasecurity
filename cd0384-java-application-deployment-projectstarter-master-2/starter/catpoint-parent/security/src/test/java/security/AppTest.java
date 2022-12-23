@@ -1,4 +1,4 @@
-package com.udacity.catpoint;
+package security;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -1,4 +1,4 @@
-package com.udacity.catpoint;
+package security;
 
 import com.image.ImageService;
 import junit.framework.Assert;
@@ -16,6 +16,9 @@ import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import security.service.SecurityService;
 import java.awt.image.BufferedImage;
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import static security.model.AlarmStatus.*;
@@ -27,7 +30,6 @@ import static org.mockito.Mockito.*;
  */
 @ExtendWith(MockitoExtension.class)
 public class SecurityServiceTest {
-
     public static final int WANTED_NUMBER_OF_INVOCATIONS = 1;
 
     @Mock
@@ -140,7 +142,36 @@ public class SecurityServiceTest {
     }
 
 
+    @Test
+    void hanldeSensorActivatedAlarmStatus() {
+        sensor = new Sensor("sensor", SensorType.WINDOW);
+        when(securityRepository.getArmingStatus()).thenReturn(ARMED_HOME);
+        when(securityRepository.getAlarmStatus()).thenReturn(ALARM);
+        securityService.changeSensorActivationStatus(sensor, Boolean.TRUE);
+        verify(securityRepository, times(1)).setAlarmStatus(NO_ALARM);
+    }
     //9    If the system is disarmed, set the status to no alarm.
+
+    @Test
+    void hanldeSensorDeActivatedAlarmStatus() {
+        sensor = new Sensor("sensor", SensorType.WINDOW);
+        sensor.setActive(true);
+        Set<Sensor> sensorsSet = new HashSet<>(Arrays.asList(sensor));
+        when(securityRepository.getSensors()).thenReturn(sensorsSet);
+
+        when(securityRepository.getAlarmStatus()).thenReturn(ALARM);
+        securityService.changeSensorActivationStatus(sensor, Boolean.FALSE);
+        Assert.assertTrue(securityRepository.getAlarmStatus() == ALARM);
+        verify(securityRepository, times( 0)).setAlarmStatus(ALARM);
+
+        sensor.setActive(true);
+        sensorsSet = new HashSet<>(Arrays.asList(sensor));
+        when(securityRepository.getSensors()).thenReturn(sensorsSet);
+        when(securityRepository.getAlarmStatus()).thenReturn(PENDING_ALARM);
+        securityService.changeSensorActivationStatus(sensor, Boolean.FALSE);
+        verify(securityRepository, times( 1)).setAlarmStatus(NO_ALARM);
+
+    }
     @Test
     void systemDisarmed_setStatusToNoAlarm() {
 
@@ -153,7 +184,6 @@ public class SecurityServiceTest {
     //10    If the system is armed, reset all sensors to inactive.
     @Test
     void systemArmed_resetSensors() {
-
         sensor = new Sensor("sensor", SensorType.WINDOW);
         sensor.setActive(true);
         when(securityRepository.getSensors()).thenReturn((Set.of(sensor)));
@@ -164,6 +194,27 @@ public class SecurityServiceTest {
         Assert.assertTrue(!sensor.getActive());
     }
 
+
+    @Test
+    void setArmingStatusTest() {
+        sensor = new Sensor("sensor", SensorType.WINDOW);
+        when(securityRepository.getAlarmStatus()).thenReturn(NO_ALARM);
+        securityService.setArmingStatus(DISARMED);
+        Assert.assertTrue(securityService.getAlarmStatus() == NO_ALARM);
+        sensor.setActive(true);
+        when(securityRepository.getSensors()).thenReturn((Set.of(sensor)));
+        securityService.setCatWasDetected(false);
+        securityService.setArmingStatus(ARMED_AWAY);
+        Assert.assertTrue(!sensor.getActive());
+
+        sensor.setActive(true);
+        securityService.setCatWasDetected(false);
+        securityService.setArmingStatus(ARMED_HOME);
+        Assert.assertTrue(!sensor.getActive());
+
+        securityService.setCatWasDetected(true);
+        securityService.setArmingStatus(ARMED_HOME);
+    }
     //11    If the system is armed-home while the camera shows a cat, set the alarm status to alarm.
     @Test
     public void systemArmedHome_cameraSpotsCat_setStatusToAlarm() {
