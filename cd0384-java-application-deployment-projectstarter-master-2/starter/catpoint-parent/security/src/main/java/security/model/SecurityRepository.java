@@ -1,4 +1,4 @@
-package model;
+package security.model;
 
 import java.util.Set;
 

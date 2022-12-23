@@ -2,10 +2,10 @@ package com.udacity.catpoint;
 
 import com.image.ImageService;
 import junit.framework.Assert;
-import model.ArmingStatus;
-import model.SecurityRepository;
-import model.Sensor;
-import model.SensorType;
+import security.model.ArmingStatus;
+import security.model.SecurityRepository;
+import security.model.Sensor;
+import security.model.SensorType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -14,13 +14,12 @@ import org.junit.jupiter.params.provider.EnumSource;
 import org.mockito.ArgumentMatchers;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.testng.asserts.Assertion;
-import service.SecurityService;
+import security.service.SecurityService;
 import java.awt.image.BufferedImage;
 import java.util.Set;
-import java.util.UUID;
-import static model.AlarmStatus.*;
-import static model.ArmingStatus.*;
+
+import static security.model.AlarmStatus.*;
+import static security.model.ArmingStatus.*;
 import static org.mockito.Mockito.*;
 
 /**

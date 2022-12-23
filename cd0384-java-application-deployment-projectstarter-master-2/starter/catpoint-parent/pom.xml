@@ -150,7 +150,12 @@
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-surefire-plugin</artifactId>
               <configuration>
-                <forkCount>3</forkCount>
+                  <argLine>
+                      --add-opens security/security.service=ALL-UNNAMED
+                      --add-opens security/security.model=ALL-UNNAMED
+                      --add-opens security/security.view=ALL-UNNAMED
+                  </argLine>
+                  <forkCount>3</forkCount>
                 <reuseForks>true</reuseForks>
     <!--            <argLine>-Xmx1024m -XX:MaxPermSize=256m</argLine>-->
               </configuration>

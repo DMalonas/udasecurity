@@ -1,8 +1,8 @@
-package view;
+package security.view;
 
-import model.ArmingStatus;
-import service.SecurityService;
-import service.StyleService;
+import security.model.ArmingStatus;
+import security.service.SecurityService;
+import security.service.StyleService;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;

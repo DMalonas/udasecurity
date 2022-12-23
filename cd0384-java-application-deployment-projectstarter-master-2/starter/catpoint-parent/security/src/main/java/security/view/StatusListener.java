@@ -1,6 +1,6 @@
-package view;
+package security.view;
 
-import model.*;
+import security.model.AlarmStatus;
 
 /**
  * Identifies a component that should be notified whenever the system status changes

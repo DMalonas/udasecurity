@@ -1,15 +1,18 @@
-package service;
+package security.service;
 
 import com.image.ImageService;
-import model.*;
-import view.StatusListener;
+import security.model.AlarmStatus;
+import security.model.ArmingStatus;
+import security.model.SecurityRepository;
+import security.model.Sensor;
+import security.view.StatusListener;
 
 import java.awt.image.BufferedImage;
 import java.util.HashSet;
 import java.util.Set;
 
-import static model.AlarmStatus.*;
-import static model.ArmingStatus.*;
+import static security.model.AlarmStatus.*;
+import static security.model.ArmingStatus.*;
 
 /**
  * Service that receives information about changes to the security system. Responsible for

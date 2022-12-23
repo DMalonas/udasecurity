@@ -1,8 +1,8 @@
-package view;
+package security.view;
 
-import model.AlarmStatus;
-import service.SecurityService;
-import service.StyleService;
+import security.model.AlarmStatus;
+import security.service.SecurityService;
+import security.service.StyleService;
 import net.miginfocom.swing.MigLayout;
 
 import javax.imageio.ImageIO;

@@ -78,7 +78,7 @@
                     <archive>
                         <manifest>
                             <mainClass>
-                                view.CatpointApp
+                                security.view.CatpointApp
                             </mainClass>
                         </manifest>
                     </archive>

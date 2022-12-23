@@ -1,10 +1,10 @@
-package view;
+package security.view;
 
-import model.AlarmStatus;
-import model.Sensor;
-import model.SensorType;
-import service.SecurityService;
-import service.StyleService;
+import security.model.AlarmStatus;
+import security.model.Sensor;
+import security.model.SensorType;
+import security.service.SecurityService;
+import security.service.StyleService;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;

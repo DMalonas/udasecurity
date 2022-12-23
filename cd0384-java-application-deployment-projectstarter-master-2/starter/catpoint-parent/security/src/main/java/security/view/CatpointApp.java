@@ -1,4 +1,4 @@
-package view;
+package security.view;
 
 /**
  * This is the main class that launches the application.

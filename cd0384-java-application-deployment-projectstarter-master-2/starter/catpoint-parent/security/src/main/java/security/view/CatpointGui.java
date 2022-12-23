@@ -1,10 +1,10 @@
-package view;
+package security.view;
 
 import com.image.FakeImageService;
 import com.image.ImageService;
-import model.PretendDatabaseSecurityRepositoryImpl;
-import model.SecurityRepository;
-import service.SecurityService;
+import security.model.PretendDatabaseSecurityRepositoryImpl;
+import security.model.SecurityRepository;
+import security.service.SecurityService;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;

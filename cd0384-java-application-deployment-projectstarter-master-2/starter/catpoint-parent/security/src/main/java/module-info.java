@@ -8,6 +8,6 @@
     requires java.prefs;
     requires com.google.gson;
     requires com.google.common;
-    opens model to com.google.gson;
+    opens security.model to com.google.gson;
 
 }

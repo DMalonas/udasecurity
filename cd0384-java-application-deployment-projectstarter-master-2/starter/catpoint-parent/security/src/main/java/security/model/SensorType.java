@@ -1,4 +1,4 @@
-package model;
+package security.model;
 
 /**
  * List of available sensor types. Not currently used by system, other than for display.
